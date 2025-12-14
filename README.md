@@ -12,7 +12,7 @@ Ideal como proyecto de portafolio para posiciones de **DevOps Junior**, **SysAdm
 
 ## Diagrama de Arquitectura
 
-```mermaid
+
 graph TD
     A[Ansible Control Node] --> |Ejecuta playbook| B[Servidor Ubuntu 24.04]
     B --> C[Nginx Web Server]
