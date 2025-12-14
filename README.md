@@ -18,7 +18,7 @@ graph TD
     B --> C[Nginx Web Server]
     B --> D[MariaDB Database]
     B --> E[PHP 8.3 + FPM]
-    B --> G[Página info.php de prueba]
+    B --> G["Página info.php de prueba"]
 
 # Características
 
