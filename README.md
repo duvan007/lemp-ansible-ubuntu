@@ -20,7 +20,7 @@ graph TD
     B --> E[PHP 8.3 + FPM]
     B --> G[Página info.php de prueba]
 
-Características
+# Características
 
 Instalación completa con un solo comando Ansible
 Actualización segura del sistema
