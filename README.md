@@ -20,9 +20,8 @@ graph TD
     B --> E[PHP 8.3 + FPM]
     B --> G["Página info.php de prueba"]
 
-# Características
-
-Instalación completa con un solo comando Ansible
+acte
+Cacterísticasstalación completa con un solo comando Ansible
 Actualización segura del sistema
 Configuración básica de Nginx y PHP-FPM
 Página de prueba info.php para verificar funcionamiento
