@@ -1,0 +1,41 @@
+---
+- name: Actualizar repositorios y paquetes
+  apt:
+    update_cache: yes
+    upgrade: dist
+
+- name: Instalar Nginx
+  apt:
+    name: nginx
+    state: present
+  notify: Reiniciar Nginx
+
+- name: Instalar MariaDB
+  apt:
+    name: mariadb-server
+    state: present
+
+- name: Instalar PHP y módulos
+  apt:
+    name:
+      - php{{ php_version }}-fpm
+      - php{{ php_version }}-mysql
+      - php{{ php_version }}-cli
+      - php{{ php_version }}-mbstring
+      - php{{ php_version }}-xml
+    state: present
+
+- name: Instalar Certbot para SSL
+  apt:
+    name:
+      - certbot
+      - python3-certbot-nginx
+    state: present
+
+- name: Crear página de prueba PHP
+  copy:
+    content: "<?php phpinfo(); ?>"
+    dest: /var/www/html/info.php
+    mode: '0644'
+
+

@@ -1,0 +1,9 @@
+---
+- name: Instalar pila LEMP con Ansible
+  hosts: servers
+  become: yes
+  vars_files:
+    - roles/lemp/vars/main.yml
+  roles:
+    - lemp
+
